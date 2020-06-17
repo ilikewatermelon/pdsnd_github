@@ -9,4 +9,4 @@
 - new_york_city.csv
 - washington.csv
 
-##### Credits: Udacity
+##### Credits: [Udacity](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104)
