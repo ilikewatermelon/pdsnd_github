@@ -6,6 +6,18 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+def get_choice(choices):
+    chosen = None
+    while chosen == None:
+        for i, choice in enumerate(choices):
+            print("{} {}".format(i, choice))
+
+        try:
+            chosen = list(choices)[int(input('Enter choice number: '))]
+        except (IndexError, ValueError):
+            print("Choose a number from 0 to {}".format(len(choices) - 1))
+
+        return chosen
 
 def get_filters():
     """
@@ -19,21 +31,16 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input('Which city\'s data do you want to explore? Chicago? New York City? Or Washington?').lower()
-    while city not in CITY_DATA.keys():
-        city = input('Not a valid city. Please select a city from Chicago, New York City, and Washington.').lower()
+    city = get_choice(CITY_DATA.keys())
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june']
-    month = input('Which month\'s data do you want to explore? For all months, please answer All.').lower()
-    while month not in months and month != 'all':
+    month = get_choice(months + ['all'])
         month = input('Not a valid month. Please select a month from January to June or answer All.').lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    day = input('Which day\'s data do you want to explore? For all days, please answer All.').lower()
-    while day not in days and day != 'all':
-        day = input('Not a valid day. Please select a day of the week or answer All.').lower()
+    day = get_choice(days + ['all'])
 
     print('-'*40)
     return city, month, day
