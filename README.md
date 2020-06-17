@@ -1,15 +1,12 @@
-### Date created
-Include the date you created this project and README file.
+##### June 1, 2020
 
-### Project Title
-Replace the Project Title
+### _Bikeshare Project_
 
-### Description
-Describe what your project is about and what it does
+##### Compare _Bikeshare_ usage in NYC, Boston, and Washington DC
 
-### Files used
-Include the files used
+##### Files used:
+1. chacago.csv
+2. new_york_city.csv
+3. washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+##### Credits: Udacity
