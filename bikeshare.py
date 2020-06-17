@@ -171,7 +171,7 @@ def main():
         sample_data = input('\nWould you like to see some sample data? Enter yes or no.\n')
         i = 0
         while sample_data.lower() == 'yes':
-            print(df.iloc[5*i:5*(i+1), :])
+            print(df.iloc[50*i:50*(i+1), :])
             i += 1
             sample_data = input('\nMore data? Enter yes or no.\n')
 
